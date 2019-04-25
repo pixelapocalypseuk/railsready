@@ -32,8 +32,8 @@ echo -e "\nUsing $pm for package installation\n"
 
 # Update the system before going any further
 echo -e "\n=> Updating system (this may take a while)..."
-sudo $pm update > $log_file 2>&1 \
- && sudo $pm -y upgrade >> $log_file 2>&1
+sudo $pm update \
+ && sudo $pm -y upgrade
 echo "==> done..."
 
 # Install build tools
@@ -47,25 +47,24 @@ echo $ruby_version
   libxslt1.1 libssl1.0-dev libssl-dev libxslt1-dev \
   libxml2 libffi-dev libyaml-dev \
   libxslt-dev autoconf libc6-dev \
-  libreadline6-dev zlib1g-dev libcurl4-openssl-dev > $log_file 2>&1
+  libreadline6-dev zlib1g-dev libcurl4-openssl-dev
 
 echo "==> done..."
 
 echo -e "\n=> Installing libs needed for sqlite and postgresql..."
-sudo $pm -y install libsqlite3-0 sqlite3 libsqlite3-dev postgresql libpq-dev >> $log_file 2>&1
+sudo $pm -y install libsqlite3-0 sqlite3 libsqlite3-dev postgresql libpq-dev
 echo "==> done..."
 
 # Install imagemagick
 echo -e "\n=> Installing imagemagick (this may take a while)..."
-sudo $pm -y install imagemagick libmagick9-dev > $log_file 2>&1
+sudo $pm -y install imagemagick libmagick9-dev
 echo "==> done..."
 
 # Install git-core
 echo -e "\n=> Installing git..."
-sudo $pm -y install git-core > $log_file 2>&1
+sudo $pm -y install git-core
 
 # Install other useful libraries
 echo -e "\n=> Installing other useful bits..."
-sudo $pm -y install htop > $log_file 2>&1
-
+sudo $pm -y install htop
 echo "==> done..."
