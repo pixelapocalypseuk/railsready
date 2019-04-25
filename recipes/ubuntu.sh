@@ -57,7 +57,7 @@ echo "==> done..."
 
 # Install imagemagick
 echo -e "\n=> Installing imagemagick (this may take a while)..."
-sudo $pm -y install imagemagick libmagick9-dev
+sudo $pm -y install imagemagick graphicsmagick-libmagick-dev-compat
 echo "==> done..."
 
 # Install git-core
