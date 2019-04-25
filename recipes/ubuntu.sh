@@ -41,7 +41,6 @@ echo -e "\n=> Installing build tools..."
 
 echo $ruby_version
 
-if ${ruby_version} < 2.5; then
   sudo $pm -y install \
   wget curl build-essential clang \
   bison openssl zlib1g \
@@ -49,15 +48,7 @@ if ${ruby_version} < 2.5; then
   libxml2 libffi-dev libyaml-dev \
   libxslt-dev autoconf libc6-dev \
   libreadline6-dev zlib1g-dev libcurl4-openssl-dev >> $log_file 2>&1
-else
-  sudo $pm -y install \
-  get curl build-essential clang \
-  bison openssl zlib1g \
-  libxslt1.1 libssl-dev libxslt1-dev \
-  libxml2 libffi-dev libyaml-dev \
-  libxslt-dev autoconf libc6-dev \
-  libreadline6-dev zlib1g-dev libcurl4-openssl-dev >> $log_file 2>&1
-fi
+
 echo "==> done..."
 
 echo -e "\n=> Installing libs needed for sqlite and postgresql..."
