@@ -41,7 +41,7 @@ echo -e "\n=> Installing build tools..."
 
 echo $ruby_version
 
-if "${ruby_version}" == "2.3.3"; then
+if [ "`echo "${ruby_version} < 2.5" | bc`" -eq 1 ]; then
   sudo $pm -y install \
   wget curl build-essential clang \
   bison openssl zlib1g \
