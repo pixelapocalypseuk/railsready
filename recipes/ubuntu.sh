@@ -32,7 +32,7 @@ echo -e "\nUsing $pm for package installation\n"
 
 # Update the system before going any further
 echo -e "\n=> Updating system (this may take a while)..."
-sudo $pm update >> $log_file 2>&1 \
+sudo $pm update > $log_file 2>&1 \
  && sudo $pm -y upgrade >> $log_file 2>&1
 echo "==> done..."
 
@@ -47,7 +47,7 @@ echo $ruby_version
   libxslt1.1 libssl1.0-dev libssl-dev libxslt1-dev \
   libxml2 libffi-dev libyaml-dev \
   libxslt-dev autoconf libc6-dev \
-  libreadline6-dev zlib1g-dev libcurl4-openssl-dev >> $log_file 2>&1
+  libreadline6-dev zlib1g-dev libcurl4-openssl-dev > $log_file 2>&1
 
 echo "==> done..."
 
@@ -57,15 +57,15 @@ echo "==> done..."
 
 # Install imagemagick
 echo -e "\n=> Installing imagemagick (this may take a while)..."
-sudo $pm -y install imagemagick libmagick9-dev >> $log_file 2>&1
+sudo $pm -y install imagemagick libmagick9-dev > $log_file 2>&1
 echo "==> done..."
 
 # Install git-core
 echo -e "\n=> Installing git..."
-sudo $pm -y install git-core >> $log_file 2>&1
+sudo $pm -y install git-core > $log_file 2>&1
 
 # Install other useful libraries
 echo -e "\n=> Installing other useful bits..."
-sudo $pm -y install htop >> $log_file 2>&1
+sudo $pm -y install htop > $log_file 2>&1
 
 echo "==> done..."
