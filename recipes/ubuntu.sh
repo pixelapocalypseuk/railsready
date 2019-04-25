@@ -45,7 +45,7 @@ if [ "`echo "${ruby_version} < 2.5" | bc`" -eq 1 ]; then
   sudo $pm -y install \
   wget curl build-essential clang \
   bison openssl zlib1g \
-  libxslt1.1 libssl1.0-dev libxslt1-dev \
+  libxslt1.1 libssl1.0-dev libssl-dev libxslt1-dev \
   libxml2 libffi-dev libyaml-dev \
   libxslt-dev autoconf libc6-dev \
   libreadline6-dev zlib1g-dev libcurl4-openssl-dev >> $log_file 2>&1
