@@ -47,7 +47,7 @@ echo $ruby_version
   libxslt1.1 libssl1.0-dev libxslt1-dev \
   libxml2 libffi-dev libyaml-dev \
   libxslt-dev autoconf libc6-dev \
-  libreadline6-dev zlib1g-dev libcurl4-openssl-dev
+  libreadline6-dev zlib1g-dev
 
 echo "==> done..."
 
